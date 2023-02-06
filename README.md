@@ -5,4 +5,7 @@ Welcome to Add files!
 
 file lists (Can get an outlook by watching the video)
 1.Image carousel effect 
-2.
+2.Personal Webpage
+3.Random Select
+4.Tribute Page1
+.......
