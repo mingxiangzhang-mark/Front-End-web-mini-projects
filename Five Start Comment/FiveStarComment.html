@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        margin: 100px auto;
+        width: 500px;
+        height: 42px;
+    }
+    .box ul{
+        list-style: none;
+        height: 42px;
+    }
+    .box ul li{
+        float: left;
+        width:50px;
+        height: 42px;
+        position: relative;
+        line-height: 42px;
+
+    }
+    .box ul li span{
+        display: block;
+        width: 44px;
+        height: 42px;
+        position: absolute;
+    }
+    .box ul li .star1{
+        background:url(./Yellowstar-1.jpg);
+        background-repeat: no-repeat;
+    }
+    .box ul li .star2{
+        background:url(./graystar.jpg);
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <span class="star1"></span>
+                <span class="star2"></span>
+            </li>
+            <li>
+                <span class="star1"></span>
+                <span class="star2"></span>
+            </li>
+            <li>
+                <span class="star1"></span>
+                <span class="star2"></span>
+            </li>
+            <li>
+                <span class="star1"></span>
+                <span class="star2"></span>
+            </li>
+            <li>
+                <span class="star1"></span>
+                <span class="star2"></span>
+            </li>
+            <li class="good">
+                <span></span> 
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <script>
+        $(".box ul li").click(function(){
+            var text1 = ['Terrible', 'Low','Medium','Good','Great'];
+            $(this).find(".star2").css("display","none");
+            $(this).prevAll().find(".star2").css("display","none");
+            $(this).nextAll().find(".star2").css("display","block");
+            
+            $(".box ul .good").html(text1[$(this).index()]);
+        })
+    </script>
+</body>
+</html>
